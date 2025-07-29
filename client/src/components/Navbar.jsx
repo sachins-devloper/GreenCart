@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
-      <NavLink to="/" onClick={()=> setOpen(false)}>
+      <NavLink to="/" onClick={() => setOpen(false)}>
         <img className="h-9 mr-1" src={assets.logo} alt="logo" />
       </NavLink>
 
@@ -33,7 +33,9 @@ const Navbar = () => {
           <img src={assets.search_icon} alt="search" className="w-4 h-4" />
         </div>
 
-        <div onClick={()=> navigate('/cart')} className="relative cursor-pointer">
+        <div
+          onClick={() => navigate("/cart")}
+          className="relative cursor-pointer">
           <img
             src={assets.nav_cart_icon}
             alt="cart"
@@ -81,7 +83,7 @@ const Navbar = () => {
         <div
           className={`${
             open ? "flex" : "hidden"
-          } absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}>
+          } absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden z-100`}>
           <NavLink to="/" onClick={() => setOpen(false)}>
             Home
           </NavLink>
